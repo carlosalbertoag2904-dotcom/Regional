@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Secret !!!</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="stylesheet" href="nada_importante.css">
+</head>
+<body>
+  <!-- HUD -->
+  <div class="hud">
+    <div class="score">Score: <span id="score">0</span></div>
+    <div class="lines">Líneas: <span id="lines">0</span></div>
+    <div class="level">Nivel: <span id="level">1</span></div>
+    <div class="hiscore">Mejor: <span id="hiscore">0</span></div>
+  </div>
+
+  <!-- Juego -->
+  <canvas width="320" height="640" id="game" aria-label="Tetris game"></canvas>
+
+  <!-- Mensaje secreto (desaparece a los 5s) -->
+  <div class="secret-msg" id="secretMsg" role="status" aria-live="polite">
+    <strong>¡Felicidades!</strong> Has encontrado el secreto.<br>
+    Estuviste atento/a a los detalles… ahora <em>¡a jugar y a superar tu récord!</em> 🎮
+  </div>
+
+  <!-- Ayuda lateral -->
+  <aside class="help" aria-hidden="false">
+    <h3>¿Cómo jugar?</h3>
+    <ul>
+      <li><strong>Flechas ← →</strong>: mover</li>
+      <li><strong>Flecha ↑</strong>: rotar</li>
+      <li><strong>Flecha ↓</strong>: bajar suave</li>
+      <li><strong>Espacio</strong>: caída rápida</li>
+      <li><strong>P</strong>: Pausa</li>
+      <li><strong>R</strong>: Reiniciar</li>
+    </ul>
+  </aside>
+
+  <!-- Overlay de Game Over -->
+  <div class="overlay" id="overlay" aria-live="polite" aria-hidden="true">
+    <div class="box">
+      <h2>¡GAME OVER!</h2>
+      <p>Puntuación: <span id="finalScore">0</span></p>
+      <p>Mejor: <span id="finalHi">0</span></p>
+      <div class="hint">Pulsa <strong>R</strong> para reiniciar</div>
+    </div>
+  </div>
+
+  <script src="nada_importante.js"></script>
+  <script src="header.js" defer></script>
+</body>
+</html>
+

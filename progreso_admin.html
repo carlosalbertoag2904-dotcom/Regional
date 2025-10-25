@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Progreso</title>
+
+  <!-- Estilo global del sitio -->
+  <link rel="stylesheet" href="direccion.css">
+  <!-- Estilo específico de esta página -->
+  <link rel="stylesheet" href="progreso.css">
+  <link rel="icon" href="chart-line.png" type="image/png">
+  <link rel="stylesheet" href="theme-toggle.css">
+  <link rel="stylesheet" href="estilo_global.css">
+</head>
+<header>
+    <div class="logo_direca">
+      <img src="logo_direca.png" alt="DIRECA">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="filtro_prap_admin.html" id="btnBackDir">← Dirección</a></li>
+      </ul>
+    </nav>
+    <div class="logo">
+      <img src="logo_mep_sinfondo.png" alt="mep">
+    </div>
+  </header>
+<body>
+  <section class="contenedor-principal">
+    <div class="fondo-blanco">
+      <h1>Progreso de objetivos</h1>
+
+      <!-- Filtros -->
+      <div class="card filters">
+        <div class="filters-grid">
+          <div>
+            <label for="filterDireccion">Dirección</label>
+            <select id="filterDireccion">
+              <option value="">Elegir…</option>
+            </select>
+          </div>
+          <div>
+            <label for="filterObjetivo">Objetivo PRAP</label>
+            <select id="filterObjetivo" disabled>
+              <option value="">Elegir…</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabla de progreso (solo lectura) -->
+      <div class="tabla-contenedor">
+        <table class="tabla-poa tabla-avance" id="tablaAvance" aria-live="polite">
+          <thead>
+            <tr>
+              <th>Objetivo</th>
+              <th>Acumulado</th>
+              <th>Pendiente</th>
+              <th>% Avance</th>
+              <th>I período (Abs)</th>
+              <th>I período (%)</th>
+              <th>II período (Abs)</th>
+              <th>II período (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="8" class="placeholder">Selecciona Dirección y Objetivo para ver el progreso.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Descripción corta del objetivo seleccionado -->
+      <div class="card objetivo-desc" id="objetivoDesc" aria-live="polite">
+        <strong>Objetivo:</strong> <span id="objTitulo">(sin seleccionar)</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="prap_progress_store.js"></script>  <!-- DEBE ir antes -->
+  <script src="progreso.js"></script>             <!-- luego tu progreso -->
+<script src="header.js" defer></script>
+<script src="theme-toggle.js" defer></script>
+
+</body>
+</html>

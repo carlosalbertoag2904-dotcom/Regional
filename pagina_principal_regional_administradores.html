@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página Principal — Administradores</title>
+
+  <link rel="icon" href="home-55534E.png" type="image/png">
+
+  <!-- CSS propio de la home -->
+  <link rel="stylesheet" href="pagina_principal_regional.css">
+
+  <!-- Pixel “secreto” (tu juego) y global (se mantienen) -->
+  <link rel="stylesheet" href="nada_fuera_de_lo_comun.css">
+
+  <!-- Temas separados (oscuro por defecto + claro con [data-theme="light"]) -->
+  <link rel="stylesheet" href="theme-dark.css">
+  <link rel="stylesheet" href="theme-light.css">
+</head>
+
+<header>
+  <!-- Logo izquierdo -->
+  <div class="logo_direca">
+    <img src="logo_direca.png" alt="DIRECA">
+  </div>
+
+  <!-- Menú centrado -->
+  <nav>
+    <ul class="nav-links">
+      <li class="nav-volver">
+        <a href="pagina_principal_regional_administradores.html">Inicio</a>
+      </li>
+
+      <!-- Desplegable -->
+      <li class="nav-dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="has-caret">Datos de la Empresa</a>
+        <ul class="dropdown-menu" aria-label="submenu">
+          <li><a href="datos_administrativos.html">Datos Administrativos</a></li>
+          <li><a href="justificacion.html">Justificación</a></li>
+          <li><a href="mvv.html">Ideas Rectoras</a></li>
+        </ul>
+      </li>
+
+      <!-- Pestaña de año -->
+      <div id="yearTab" class="year-tab"></div>
+
+      <!-- Botón de tema -->
+      <li class="theme-switch">
+        <button id="themeToggle"
+                class="switch"
+                aria-label="Cambiar tema"
+                aria-pressed="false"
+                data-sun="sun-000000.png"
+                data-moon="moon-000000.png">
+          <span class="knob" aria-hidden="true"></span>
+        </button>
+      </li>
+
+      <li class="boton_salida">
+        <a href="index.html">Cerrar sesión</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Logo derecho -->
+  <div class="logo">
+    <img src="logo_mep_sinfondo.png" alt="MEP">
+  </div>
+</header>
+
+<body class="home-page">
+  <main class="container">
+    <!-- Panel izquierdo -->
+    <div class="left-panel">
+      <div class="info-box">
+        <img src="icono_perfil_admin.png" alt="perfil">
+        <h3 class="user-name">Modo Administrador</h3>
+        <div data-admin-name-slot class="name-slot"></div>
+        <div data-admin-asesoria-slot class="asesoria-slot"></div>
+      </div>
+    </div>
+
+    <!-- Panel derecho -->
+    <div class="right-panel">
+      <div class="button-grid">
+        <!-- 1) POA -->
+        <a href="direccion.html" class="menu-button">
+          <span class="mb-icon">
+            <img src="tabs-ffffff.png" alt="POA" />
+          </span>
+          <span class="mb-label">POA</span>
+        </a>
+
+        <!-- 2) PRAP -->
+        <a href="filtro_prap_admin.html" class="menu-button">
+          <span class="mb-icon">
+            <img src="calendar.png" alt="PRAP" />
+          </span>
+          <span class="mb-label">PRAP</span>
+        </a>
+
+        <!-- 3) Índice de Colaboradores -->
+        <a href="indice_colaboradores_admin.html" class="menu-button">
+          <span class="mb-icon">
+            <img src="subtask-ffffff.png" alt="Índice de Colaboradores" />
+          </span>
+          <span class="mb-label">Índice de Colaboradores</span>
+        </a>
+
+        <!-- 4) Control de Visitas (rectangular) -->
+        <a href="#" class="menu-button menu-button--wide" onclick="return false;">
+          <span class="mb-icon mb-icon--small">
+            <img src="book-closed-ffffff.png" alt="" />
+          </span>
+          <span class="mb-label">Control de Visitas</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer></footer>
+
+  <!-- JS (se mantienen) -->
+  <script src="nada_fuera_de_lo_comun.js"></script>
+  <script src="header.js" defer></script>
+  <script src="pagina_principal_regional.js"></script>
+
+  <!-- Toggle de tema -->
+  <script src="theme-toggle.js" defer></script>
+</body>
+</html>
